@@ -54,8 +54,9 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         title: String,
         message: String
     ): RemoteViews {
+        Log.e("check RemoteViews","check1")
         val remoteViews = RemoteViews(
-            "com.example.pushnotificationfcm" ,
+            packageName,
             R.layout.item_notificaition
         )
         remoteViews.setTextViewText(R.id.tvTittle, title)
@@ -69,10 +70,18 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
     // Method to display the notifications
 
+
     fun showNotification(
         title: String,
         message: String
     ) {
+
+        val remoteViews: RemoteViews = RemoteViews(
+            packageName,
+            R.layout.item_notificaition
+        )
+        remoteViews.setTextViewText(R.id.tvTittle, title)
+        remoteViews.setTextViewText(R.id.tvBody, message)
 
         Log.e("check","2")
         notificationManager = getSystemService(
@@ -94,7 +103,9 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
             .setContentText(message)
             .setSmallIcon(R.drawable.ic_run24)
             .setContentIntent(pendingIntent)
-        
+//            .setContent(remoteViews)
+
+
 
 
         Log.e("check","4")

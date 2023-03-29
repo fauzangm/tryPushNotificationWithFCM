@@ -67,8 +67,8 @@ class MainActivity : AppCompatActivity() {
 
         notificationBuilder.apply {
             setSmallIcon(R.drawable.ic_baseline_notifications_24)
-            setContentTitle("With Button Click")
-            setContentText("Android 13 notification")
+//            setContentTitle("With Button Click")
+            setContentText("With Button notification")
         }
 
         if (ActivityCompat.checkSelfPermission(

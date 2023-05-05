@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail.DetailActivity">
+
+    <TextView
+        android:id="@+id/tvAbsen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Absen"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="20dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAbsenWfh"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_primary_outline_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAbsen"
+        android:layout_margin="30dp">
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/circularProgressBarWfh"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            app:cpb_background_progressbar_color="#D6D5D5"
+            app:cpb_background_progressbar_width="10dp"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progressbar_color="#5DCDC0"
+            app:cpb_progressbar_width="10dp"
+            app:cpb_progress="40"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="10dp"
+            app:cpb_round_border="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="WFH"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAbsenWfo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_primary_outline_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clAbsenWfh"
+        android:layout_margin="30dp">
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/circularProgressBarWfo"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:cpb_background_progressbar_color="#D6D5D5"
+                    app:cpb_background_progressbar_width="10dp"
+                    app:cpb_progress_direction="to_right"
+                    app:cpb_progressbar_color="#5DCDC0"
+                    app:cpb_progressbar_width="10dp"
+                    app:cpb_progress="80"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="10dp"
+                    app:cpb_round_border="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="WFO"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAbsenWfa"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="100dp"
+        android:background="@drawable/background_primary_outline_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clAbsenWfo"
+        android:layout_margin="30dp">
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/circularProgressBarWfa"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:cpb_background_progressbar_color="#D6D5D5"
+                    app:cpb_background_progressbar_width="10dp"
+                    app:cpb_progress_direction="to_right"
+                    app:cpb_progressbar_color="#5DCDC0"
+                    app:cpb_progressbar_width="10dp"
+                    app:cpb_progress="50"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="10dp"
+                    app:cpb_round_border="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="WFA"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imgResult"
+        android:layout_width="200dp"
+        android:layout_marginStart="50dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clAbsenWfa"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnSave"
+        android:text="Kirim"
+        android:layout_width="100dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgResult"
+        app:layout_constraintStart_toEndOf="@id/imgResult"
+        app:layout_constraintTop_toTopOf="@+id/imgResult" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -76,12 +76,12 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         message: String
     ) {
 
-        val remoteViews: RemoteViews = RemoteViews(
-            packageName,
-            R.layout.item_notificaition
-        )
-        remoteViews.setTextViewText(R.id.tvTittle, title)
-        remoteViews.setTextViewText(R.id.tvBody, message)
+//        val remoteViews: RemoteViews = RemoteViews(
+//            packageName,
+//            R.layout.item_notificaition
+//        )
+//        remoteViews.setTextViewText(R.id.tvTittle, title)
+//        remoteViews.setTextViewText(R.id.tvBody, message)
 
         Log.e("check","2")
         notificationManager = getSystemService(

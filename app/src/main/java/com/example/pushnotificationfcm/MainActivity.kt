@@ -28,6 +28,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.example.pushnotificationfcm.databinding.ActivityMainBinding
+import com.example.pushnotificationfcm.detail.DetailActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -44,6 +45,8 @@ class MainActivity : AppCompatActivity() {
         createNotificationChannel()
         binding.btnClick.setOnClickListener {
             sendNotification()
+
+            startActivity(Intent(this,DetailActivity::class.java))
         }
     }
 
@@ -68,7 +71,7 @@ class MainActivity : AppCompatActivity() {
         notificationBuilder.apply {
             setSmallIcon(R.drawable.ic_baseline_notifications_24)
 //            setContentTitle("With Button Click")
-            setContentText("With Button notification")
+            setContentText("Silahkan Absen")
         }
 
         if (ActivityCompat.checkSelfPermission(
